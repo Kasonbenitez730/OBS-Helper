@@ -1,7 +1,7 @@
 
 <img width="1020" height="510" alt="OBS" src="https://github.com/user-attachments/assets/d3e86076-d36f-489e-a58a-693c4d749f98" />
 
-# OBS Designer Overlay Plugin
+
 
 ## How it works
 
