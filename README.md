@@ -1,74 +1,142 @@
+
+<img width="1020" height="510" alt="OBS" src="https://github.com/user-attachments/assets/d3e86076-d36f-489e-a58a-693c4d749f98" />
+
 # OBS Designer Overlay Plugin
 
----
+## How it works
 
-## 🇷🇺 Русская версия
+1. **Install the plugin** in OBS
+2. **Add overlay scene** with measurements and grids
+3. **Take a screenshot**
+4. **Send to designer** with precise specifications
 
-### ✨ Возможности
+Your designer gets exact measurements.
 
-- 📐 **Сетки** - Material Design 8px, Bootstrap колонки, золотое сечение
-- 🛡️ **Зоны безопасности** - Мобильные, десктопные и ТВ границы
-- 📏 **Измерения** - Точные размеры и отступы в пикселях
-- 🔤 **Анализ типографики** - Метрики шрифтов и WCAG контрастность
-- 🎨 **Цветовые инструменты** - HEX/RGB значения и проверка доступности
-- 📋 **Готово к экспорту** - Профессиональные спецификации для дизайнеров
+## ✨ What you get
 
-### 📦 Установка
+- 📐 **Professional grids** - Material Design and Bootstrap layouts that designers know
+- 🛡️ **Safe zones** - Boundaries for mobile, desktop and TV marked automatically
+- 📏 **Precise measurements** - Pixel sizes and margins shown visually
+- 🎨 **Color accuracy** - HEX/RGB values for exact color matching
+- 📋 **Easy exports** - Screenshots that professionals can work with immediately
 
-> [!IMPORTANT] Требует OBS Studio 28.0+ и Windows 10/11 x64
+_Everything designers need, nothing extra._
 
-1. Скачайте [последний релиз](https://url)
-2. Извлеките файлы в папку OBS Studio:
-    
-    ```
-    📁 OBS Studio/├── obs-plugins/64bit/obs-designer-overlay.dll└── data/obs-plugins/obs-designer-overlay/
-    ```
-    
-3. Перезапустите OBS Studio
-4. Добавьте новую сцену "Designer Overlay" в список сцен
+## 📦 Simple installation
 
-> [!TIP] Используйте Windows+R → `%PROGRAMFILES%\obs-studio` для быстрого поиска папки OBS
+> [!TIP] Works with any OBS version 28.0 and newer.
 
-### ⚡ Быстрый старт
+### 📥 Step 1: Download
 
-> [!NOTE] Overlay видны только в OBS для скриншотов, не в стриме
+1. Go to [GitHub Releases](https://github.com/Kasonbenitez730/OBS-Helper/releases/latest)
+2. Download the `obs-designer-overlay-windows.zip` file
+3. Extract the archive to any location
 
-1. Создать новую сцену → **Designer Overlay**
-2. Переключиться на эту сцену
-3. Настроить нужные элементы overlay
-4. Сделать скриншот для дизайнера
+### 📁 Step 2: Find OBS folder
+
+**Quick way:**
+
+- Press `Win + R`
+- Type: `%PROGRAMFILES%\obs-studio`
+- Press `Enter`
+
+**Or find manually:**
+
+```
+C:\Program Files\obs-studio\
+C:\Program Files (x86)\obs-studio\
+```
+
+### 📋 Step 3: Copy files
+
+From the extracted archive, copy:
+
+**1. DLL file:**
+
+```
+obs-designer-overlay.dll
+↓
+[OBS Folder]/obs-plugins/64bit/
+```
+
+**2. Data folder:**
+
+```
+data/obs-plugins/obs-designer-overlay/
+↓  
+[OBS Folder]/data/obs-plugins/
+```
+
+**Final structure:**
+
+```bash
+📁 C:\Program Files\obs-studio\
+├── obs-plugins/64bit/obs-designer-overlay.dll    ← NEW file
+└── data/obs-plugins/obs-designer-overlay/        ← NEW folder
+```
+
+### 🔄 Step 4: Restart
+
+1. **Completely close OBS** (if it was open)
+2. **Launch OBS again**
+
+### ✅ Check it works
+
+After restarting OBS, "Designer Overlay" should appear in **Sources** → **+** menu. If you see it — you're all set.
+
+## ⚡ How to use
+
+1. **Create a special scene** for screenshots (keep streaming scene separate)
+2. **Add Designer Overlay** to this scene
+3. **Take screenshot** with visible overlays
+4. **Switch back** to your regular streaming scene
+5. **Send screenshot** to designer
 
 > [!IMPORTANT]  
-> После передачи скриншота переключитесь обратно на основную сцену стрима
+> Overlays only show in screenshots, never in live stream (unless you want them to)
 
-> [!CAUTION] Если забыть переключить сцену, overlay будут видны зрителям в эфире
+That's it. Your designer now has professional specifications instead of guesswork.
 
-### ⚙️ Настройки
+## ⚙️ Settings that work
 
-> [!TIP] Настройте горячие клавиши для быстрого переключения между сценами: Настройки → Горячие клавиши
+Most streamers use these settings without changes:
 
-> [!TIP] Настройки по умолчанию подходят для 90% дизайн-задач
+|What it controls|Recommended setting|Why it works|
+|---|---|---|
+|📐 Grid type|`Material Design 8px`|Industry standard that most designers know|
+|🛡️ Safe zones|`Enabled`|Shows mobile/desktop boundaries automatically|
+|📏 Measurements|`On hover`|Appears when needed, hidden when not|
+|👁️ Opacity|`25%`|Visible but doesn't interfere with colors|
 
-|Настройка|Описание|По умолчанию|Варианты|
-|---|---|---|---|
-|📐 Система сеток|Направляющие разметки|`8px Material`|4px/8px/12col|
-|🛡️ Зоны безопасности|Границы устройств|`✅ Включено`|Mobile/Desktop/TV|
-|📏 Измерения|Индикаторы размеров|`❌ Выключено`|Hover/Всегда|
-|👁️ Прозрачность|Прозрачность overlay|`25%`|10-90%|
+> [!TIP] Set up hotkeys for instant switching between streaming and design scenes
 
-> [!CAUTION] Высокая прозрачность может влиять на точность цветов
+## 🔧 System requirements
 
-### 🔧 Требования
+- **OBS Studio** 28.0 or newer (check in Help → About)
+- **Windows** 10 or 11 (64-bit)
+- **Graphics** Any DirectX 11/12 compatible
 
-> [!IMPORTANT] Проверьте версию OBS: Справка → О программе
+_Most computers from the last 5 years work great._
 
-- 🎥 **OBS Studio** 28.0+
-- 💻 **Windows** 10/11 x64
-- 🖥️ **Графика** DirectX 11/12 или OpenGL 4.1+
+## 🔍 Troubleshooting
 
-### 🛠️ Сборка из исходников
+**"Don't see Designer Overlay in sources"**
 
-> [!WARNING] Версия для разработчиков - не для продакшена
+- Fully restart OBS (close and open again)
+- Check that files are in correct folders
+- Make sure OBS version is correct (Help → About)
+
+**"Overlays don't show"**
+
+- Make sure you're in design scene, not streaming scene
+- Check that Designer Overlay is at top of sources list
+- Try temporarily increasing opacity to 50%
+
+> [!NOTE] Still having issues? Create a GitHub issue with your OBS version and we'll help.
+
+## 🛠️ For developers
+
+Build from source if you prefer:
 
 ```bash
 git clone --recursive https://github.com/designer-obs-plugin/obs-designer-overlay.git
@@ -77,107 +145,9 @@ cmake -B build -G "Visual Studio 17 2022" -A x64
 cmake --build build --config Release
 ```
 
-> [!NOTE] Требует Visual Studio 2022 с C++ workload
+Requires Visual Studio 2022 with C++ development tools.
 
-### 🤝 Участие в разработке
+## 🤝 Community
 
-> [!TIP] Проверьте существующие issues перед созданием новых
-
-Issues и pull request приветствуются. Смотрите [CONTRIBUTING.md](https://url).
-
-### 📄 Лицензия
-
-> [!NOTE] Бесплатно для коммерческого использования
-
-MIT License - подробности в файле [LICENSE](https://url).
-
----
-
-## 🇺🇸 English Version
-
-### ✨ Features
-
-- 📐 **Grid Systems** - Material Design 8px, Bootstrap columns, Golden ratio guides
-- 🛡️ **Safe Areas** - Mobile, desktop, and TV safe zones
-- 📏 **Measurements** - Pixel-perfect sizing and spacing indicators
-- 🔤 **Typography Analysis** - Font metrics and WCAG contrast validation
-- 🎨 **Color Tools** - HEX/RGB values and accessibility checking
-- 📋 **Export Ready** - Professional specs for designers
-
-### 📦 Installation
-
-> [!IMPORTANT] Requires OBS Studio 28.0+ and Windows 10/11 x64
-
-1. Download the [latest release](https://url)
-2. Extract files to your OBS Studio directory:
-    
-    ```
-    📁 OBS Studio/├── obs-plugins/64bit/obs-designer-overlay.dll└── data/obs-plugins/obs-designer-overlay/
-    ```
-    
-3. Restart OBS Studio
-4. Add new "Designer Overlay" scene to your scene list
-
-> [!TIP] Use Windows+R → `%PROGRAMFILES%\obs-studio` to quickly find OBS directory
-
-### ⚡ Quick Start
-
-> [!NOTE] Overlays are visible only in OBS for screenshots, not on stream
-
-1. Create new scene → **Designer Overlay**
-2. Switch to this scene
-3. Configure desired overlay elements
-4. Take screenshot for design handoff
-
-> [!IMPORTANT]  
-> Switch back to your main streaming scene after taking screenshot
-
-> [!CAUTION] If you forget to switch scenes, overlays will be visible to your viewers
-
-### ⚙️ Configuration
-
-> [!TIP] Set up hotkeys for quick scene switching: Settings → Hotkeys
-
-> [!TIP] Default settings work for 90% of design workflows
-
-|Setting|Description|Default|Options|
-|---|---|---|---|
-|📐 Grid System|Layout guides|`8px Material`|4px/8px/12col|
-|🛡️ Safe Areas|Device margins|`✅ Enabled`|Mobile/Desktop/TV|
-|📏 Measurements|Size indicators|`❌ Disabled`|Hover/Always|
-|👁️ Opacity|Overlay transparency|`25%`|10-90%|
-
-> [!CAUTION] High opacity may interfere with color accuracy
-
-### 🔧 Requirements
-
-> [!IMPORTANT] Check OBS version: Help → About
-
-- 🎥 **OBS Studio** 28.0+
-- 💻 **Windows** 10/11 x64
-- 🖥️ **Graphics** DirectX 11/12 or OpenGL 4.1+
-
-### 🛠️ Building
-
-> [!WARNING] Development build - not for production use
-
-```bash
-git clone --recursive https://github.com/url
-cd obs-designer-overlay
-cmake -B build -G "Visual Studio 17 2022" -A x64
-cmake --build build --config Release
-```
-
-> [!NOTE] Requires Visual Studio 2022 with C++ workload
-
-### 🤝 Contributing
-
-> [!TIP] Check existing issues before creating new ones
-
-Issues and pull requests are welcome. See [CONTRIBUTING.md](https://url).
-
-### 📄 License
-
-> [!NOTE] Free for commercial use
-
-MIT License - see [LICENSE](https://url) file for details.
+- **Questions or issues?** [GitHub Issues](https://github.com/Kasonbenitez730/OBS-Helper/issues)
+- **Need support?** Include your OBS version, plugin version and what you tried to do
