@@ -139,7 +139,7 @@ _Most computers from the last 5 years work great._
 Build from source if you prefer:
 
 ```bash
-git clone --recursive https://github.com/designer-obs-plugin/obs-designer-overlay.git
+git clone --recursive https://github.com/Kasonbenitez730/OBS-Helper.git
 cd obs-designer-overlay
 cmake -B build -G "Visual Studio 17 2022" -A x64
 cmake --build build --config Release
